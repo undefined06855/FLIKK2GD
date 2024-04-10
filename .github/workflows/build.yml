@@ -36,7 +36,6 @@ jobs:
         uses: geode-sdk/build-geode-mod@main
         with:
           sdk: latest
-          build-args: '-DGEODE_REVERT_TODO_RETURN=True'
           combine: true
           target: ${{ matrix.config.target }}
           bindings: 'undefined06855/bindings'

@@ -14,6 +14,9 @@ add_library(${PROJECT_NAME} SHARED
     "src/BlockMappings.cpp"
 )
 
+# this is only set here for the gh action - msvc should use the CMakeSettings.json
+set(GEODE_REVERT_TODO_RETURN ON)
+
 if (NOT DEFINED ENV{GEODE_SDK})
     message(FATAL_ERROR "Unable to find Geode SDK! Please define GEODE_SDK environment variable to point to Geode")
 else()
