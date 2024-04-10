@@ -1,0 +1,14 @@
+{
+	"geode": "2.0.0-beta.22",
+	"gd": { "win": "2.204" },
+	"version": "v1.0.0",
+	"id": "undefined0.flikk2gd",
+	"name": "FLIKK2GD",
+	"developer": "undefined0",
+	"description": "Flikk now in GD (real)",
+	"resources": {
+		"spritesheets": {
+			"flikkman": [ "resources/flikkman.png", "resources/placeholder.png" ]
+		}
+	}
+}

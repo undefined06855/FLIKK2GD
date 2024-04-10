@@ -1,0 +1,25 @@
+﻿{
+  "configurations": [
+    {
+      "name": "build",
+      "generator": "Ninja",
+      "configurationType": "RelWithDebInfo",
+      "inheritEnvironments": [ "msvc_x86" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "GEODE_REVERT_TODO_RETURN",
+          "value": "true"
+        },
+        {
+          "name": "GEODE_BINDINGS_REPO_PATH",
+          "value": "C:\\Users\\undefined0\\things\\bindings"
+        }
+      ]
+    }
+  ]
+}
