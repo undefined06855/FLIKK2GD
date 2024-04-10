@@ -161,7 +161,8 @@ void Flikk2GDPopup::convertFlikkFile(std::string data) {
 
     auto editor = LevelEditorLayer::get();
 
-    log::info("{}", editor->getLevelString());
+    // *LevelEditorLayer->getLevelString is actually a TodoReturn (should be gd::string)
+    //log::info("{}", editor->getLevelString());
 
     // half opacity alpha trigger
     editor->createObjectsFromString((new Block(1007))->set(Param::alphaTriggerSetup)->commit(-60, 0, 0), true, true);
