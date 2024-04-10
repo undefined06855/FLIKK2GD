@@ -32,6 +32,7 @@ std::string Param::alphaTriggerSetup = "35,0.5,51,69,10,0.0,";
 std::string Param::backgroundColorTriggerSetup = "7,130,8,191,9,229,23,1000,";
 std::string Param::objectColorTriggerSetup = "7,0,8,0,9,0,23,1004,";
 std::string Param::blackBlendingColorTriggerSetup = "17,1,7,0,8,0,9,0,23,9,";
+std::string Param::gravityTriggerSetup = "148,0.55,";
 
 std::string Param::undefinedBlock = "1,0,";
 

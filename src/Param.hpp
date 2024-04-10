@@ -24,6 +24,7 @@ public:
 	static std::string backgroundColorTriggerSetup;
 	static std::string objectColorTriggerSetup;
 	static std::string blackBlendingColorTriggerSetup;
+	static std::string gravityTriggerSetup;
 
 	static std::string undefinedBlock;
 };

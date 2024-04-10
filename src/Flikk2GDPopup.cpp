@@ -25,6 +25,8 @@ bool Flikk2GDPopup::setup() {
     auto menu = CCMenu::create();
     menu->ignoreAnchorPointForPosition(false);
     menu->setID("main-menu");
+    // dont ask why this is needed
+    menu->setPosition(CCPoint{ this->m_mainLayer->getContentSize().width / 2, this->m_mainLayer->getContentSize().height / 2 });
 
     auto importButton = CCMenuItemSpriteExtra::create(
         ButtonSprite::create("Select .flkk"),
@@ -162,8 +164,10 @@ void Flikk2GDPopup::convertFlikkFile(std::string data) {
     auto editor = LevelEditorLayer::get();
 
     // *LevelEditorLayer->getLevelString is actually a TodoReturn (should be gd::string)
-    //log::info("{}", editor->getLevelString());
-
+    // and only "works" on windows with my bindings
+#ifndef GEODE_IS_ANDROID:
+    log::info("{}", editor->getLevelString());
+#endif
     // half opacity alpha trigger
     editor->createObjectsFromString((new Block(1007))->set(Param::alphaTriggerSetup)->commit(-60, 0, 0), true, true);
 
@@ -172,6 +176,7 @@ void Flikk2GDPopup::convertFlikkFile(std::string data) {
     editor->createObjectsFromString((new Block(899))->set(Param::backgroundColorTriggerSetup)->commit(-60, 30, 0), true, true); // white bg colour
     editor->createObjectsFromString((new Block(899))->set(Param::objectColorTriggerSetup)->commit(-90, 30, 0), true, true); // black object colour
     editor->createObjectsFromString((new Block(899))->set(Param::blackBlendingColorTriggerSetup)->commit(-120, 30, 0), true, true); // black blending colour (9)
+    editor->createObjectsFromString((new Block(2066))->set(Param::gravityTriggerSetup)->commit(-150, 30, 0), true, true); // gravity trigger
     editor->m_levelSettings->m_platformerMode = true;
 
     // place all the blocks
