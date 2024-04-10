@@ -11,7 +11,7 @@ float lastBlockRotation = 0.f;
 
 Flikk2GDPopup* Flikk2GDPopup::create() {
     auto ret = new Flikk2GDPopup();
-    if (ret && ret->init(240.f, 190.f)) {
+    if (ret && ret->initAnchored(240.f, 190.f)) {
         ret->autorelease();
         return ret;
     }
@@ -57,7 +57,8 @@ bool Flikk2GDPopup::setup() {
     text->setID("spacer-text");
     menu->addChild(text);
 
-    this->idField = InputNode::create(180, "Level ID", "bigFont.fnt", "0123456789", 8);
+    this->idField = TextInput::create(180, "Level ID", "bigFont.fnt");
+    this->idField->setFilter("1234567890");
     this->idField->setPosition(CCPoint{ win.width / 2, win.height / 2 - 28 });
     this->idField->setID("id-field");
     menu->addChild(this->idField);

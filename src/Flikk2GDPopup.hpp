@@ -12,7 +12,7 @@ protected:
     void importFromFile(CCObject* sender);
     bool setup() override;
 
-    InputNode* idField = nullptr;
+    TextInput* idField = nullptr;
 public:
     static Flikk2GDPopup* create();
 };

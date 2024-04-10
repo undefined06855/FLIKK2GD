@@ -11,7 +11,8 @@ add_library(${PROJECT_NAME} SHARED
     "src/main.cpp"
     "src/Flikk2GDPopup.cpp"
     "src/Param.cpp"
- "src/BlockMappings.cpp")
+    "src/BlockMappings.cpp"
+)
 
 if (NOT DEFINED ENV{GEODE_SDK})
     message(FATAL_ERROR "Unable to find Geode SDK! Please define GEODE_SDK environment variable to point to Geode")
